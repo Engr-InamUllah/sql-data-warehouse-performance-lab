@@ -1,0 +1,19 @@
+name: sql-data-warehouse-performance-lab
+owner: Engr-InamUllah
+status: scaffold
+stack: 'SQL Server, T-SQL, execution plans'
+pipeline:
+  - generate_data
+  - baseline
+  - index
+  - partition
+  - benchmark
+quality_gates:
+  - schema_validation
+  - null_thresholds
+  - duplicate_detection
+  - freshness_check
+  - automated_tests
+security:
+  secrets: environment_or_secret_store
+  least_privilege: true
