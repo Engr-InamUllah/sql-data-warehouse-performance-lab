@@ -1,0 +1,1 @@
+CREATE INDEX ix_fact_sales_date_product ON fact_sales(sale_date, product_id) INCLUDE (amount);
